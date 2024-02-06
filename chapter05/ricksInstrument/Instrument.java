@@ -1,13 +1,13 @@
-public class Guitar {
+public class Instrument {
 
     private String serialNumber;
     private double price;
-    GuitarSpec spec;
+    private InstrumentSpec spec;
 
-    public Guitar(String serialNumber, double price, GuitarSpec guitarSpec) {
+    public Instrument(String serialNumber, double price, InstrumentSpec spec) {
         this.serialNumber = serialNumber;
         this.price = price;
-        this.spec = new GuitarSpec(guitarSpec);
+        this.spec = spec;
     }
 
     public String getSerialNumber() {
@@ -18,11 +18,13 @@ public class Guitar {
         return price;
     }
 
-    public void setPrice(float newPrice) {
+    public void setPrice(double newPrice) {
         this.price = newPrice;
     }
 
-    public GuitarSpec getSpec() {
+    public InstrumentSpec getSpec() {
         return spec;
     }
+
+
 }
